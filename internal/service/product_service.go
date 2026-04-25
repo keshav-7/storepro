@@ -2,8 +2,8 @@ package service
 
 import (
 	"errors"
-	"prodexa/internal/models"
-	"prodexa/internal/repository"
+	"storepro/internal/models"
+	"storepro/internal/repository"
 )
 
 type ProductService interface {

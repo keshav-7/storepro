@@ -1,11 +1,11 @@
 package main
 
 import (
-	"prodexa/internal/database"
-	"prodexa/internal/handler"
-	"prodexa/internal/repository"
-	"prodexa/internal/routes"
-	"prodexa/internal/service"
+	"storepro/internal/database"
+	"storepro/internal/handler"
+	"storepro/internal/repository"
+	"storepro/internal/routes"
+	"storepro/internal/service"
 
 	"github.com/gin-gonic/gin"
 )

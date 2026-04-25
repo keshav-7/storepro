@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"prodexa/internal/models"
-	"prodexa/internal/service"
+	"storepro/internal/models"
+	"storepro/internal/service"
 
 	"github.com/gin-gonic/gin"
 )

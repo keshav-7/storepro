@@ -1,12 +1,12 @@
-# 🚀 Prodexa
+# 🚀 StorePro
 
-**Prodexa** is a scalable, multi-tenant SaaS platform for **Product & Inventory Management**, built to help businesses efficiently manage stock, orders, and operations from a single system.
+**storepro** is a scalable, multi-tenant SaaS platform for **Product & Inventory Management**, built to help businesses efficiently manage stock, orders, and operations from a single system.
 
 ---
 
 ## 🧠 Overview
 
-Prodexa is designed for:
+storepro is designed for:
 
 * Retail businesses
 * Warehouses
@@ -119,7 +119,7 @@ It provides a centralized platform to:
 ## 📦 Project Structure
 
 ```
-prodexa/
+storepro/
 │── cmd/                # Entry point
 │── internal/
 │   ├── handlers/      # API handlers
@@ -146,8 +146,8 @@ prodexa/
 ### Setup
 
 ```bash
-git clone https://github.com/your-username/prodexa.git
-cd prodexa
+git clone https://github.com/your-username/storepro.git
+cd storepro
 ```
 
 ### Environment Variables
@@ -158,7 +158,7 @@ Create `.env` file:
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=password
-DB_NAME=prodexa
+DB_NAME=storepro
 JWT_SECRET=your_secret
 ```
 
@@ -191,7 +191,7 @@ go test ./...
 
 ## 💰 SaaS Vision
 
-Prodexa aims to become a **complete business operating system** for SMEs:
+storepro aims to become a **complete business operating system** for SMEs:
 
 * Inventory
 * Orders

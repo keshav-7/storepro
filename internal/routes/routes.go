@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"prodexa/internal/handler"
-	"prodexa/internal/middleware"
+	"storepro/internal/handler"
+	"storepro/internal/middleware"
 
 	"github.com/gin-gonic/gin"
 )

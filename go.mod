@@ -1,4 +1,4 @@
-module prodexa
+module storepro
 
 go 1.26.2
 
