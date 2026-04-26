@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"log"
 	"net/http"
 	"strconv"
 
@@ -23,18 +24,28 @@ func (h *ProductHandler) CreateProduct(c *gin.Context) {
 	var product models.Product
 
 	if err := c.ShouldBindJSON(&product); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		c.JSON(400, gin.H{"error": err.Error()})
+		return
+	}
+
+	// Debug log
+	log.Println("Incoming product:", product)
+
+	if product.Name == "" {
+		c.JSON(400, gin.H{"error": "name is required"})
 		return
 	}
 
 	tenantID := c.GetUint("tenant_id")
 
-	if err := h.service.CreateProduct(&product, tenantID); err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+	err := h.service.CreateProduct(&product, tenantID)
+	if err != nil {
+		log.Println("Create error:", err)
+		c.JSON(500, gin.H{"error": err.Error()})
 		return
 	}
 
-	c.JSON(http.StatusCreated, product)
+	c.JSON(201, product)
 }
 
 // GET ALL

@@ -1,8 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"storepro/internal/database"
 	"storepro/internal/handler"
+	"storepro/internal/models"
 	"storepro/internal/repository"
 	"storepro/internal/routes"
 	"storepro/internal/service"
@@ -15,6 +17,11 @@ func main() {
 
 	// DB
 	db := database.InitDB()
+
+	// Auto migrate tables
+	fmt.Println("Running AutoMigrate...")
+	db.AutoMigrate(&models.Product{})
+	fmt.Println("AutoMigrate done")
 
 	// Dependency Injection
 	productRepo := repository.NewProductRepository(db)

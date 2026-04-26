@@ -25,8 +25,8 @@ func SetupRoutes(r *gin.Engine, productHandler *handler.ProductHandler) {
 	{
 		products := protected.Group("/products")
 		{
-			products.POST("/", productHandler.CreateProduct)
-			products.GET("/", productHandler.GetProducts)
+			products.POST("", productHandler.CreateProduct)
+			products.GET("", productHandler.GetProducts)
 			products.GET("/:id", productHandler.GetProduct)
 			products.PUT("/:id", productHandler.UpdateProduct)
 			products.DELETE("/:id", productHandler.DeleteProduct)
